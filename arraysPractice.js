@@ -228,24 +228,19 @@ function both(arr1, arr2){
   var newArray = [];
 
   if(arr1.length > arr2.length){
-     for(var i = 0; i < arr1.length; i++){
-    for(var p = 0; p < arr2.length; p++){
-      if(arr1.includes(arr2[p])){
-        newArray.push(arr[i])
+    for(var i = 0; i < arr2.length; i++){
+      if(arr1.includes(arr2[i])){
+        newArray.push(arr2[i]);
       }
     }
   }
-}
-else{
-  for(var x = 0; x < arr2.length; x++){
-    for(var j = 0; j < arr1.length; j++){
-      if(arr2.includes(arr1[p])){
-        newArray.push(arr[p])
+  else{
+    for(var x = 0; x < arr1.length; x++){
+      if(arr2.includes(arr1[x])){
+        newArray.push(arr1[x]);
       }
     }
   }
-}
-
   return newArray;
 }
 
